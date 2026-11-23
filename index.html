@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lógica de programador e olhar de cineasta.</title>
+
+  <!-- Fontes -->
+  <link rel="icon" type="image/png" href="img/moon_PNG24.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Cabeçalho fixo -->
+  <header>
+    <div class="wrap bar">
+      <a class="brand" href="#inicio">arthur.<span>cinephile</span> <i>// Pereira</i></a>
+
+      <nav class="top" aria-label="Principal">
+        <a href="#inicio">Início</a>
+        <a href="#codigos">Códigos C</a>
+        <a href="#cinema">Cinema</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <div class="wrap">
+      <!-- Seção inicial / Hero -->
+      <section class="hero" id="inicio">
+        <div>
+          <span class="chip amber">● Sistemas de Informação · UDF</span>
+          <h1><u>Lógica</u> de programador, olhar de <em>cineasta</em>.</h1>
+          <p class="lead">
+            Estudante de Sistemas de Informação na UDF. Programo em C e estudo estruturas de dados.
+          </p>
+
+          <div class="btns">
+            <a class="btn pri" href="#codigos">Explorar códigos C</a>
+            <a class="btn sec" href="#cinema">Ver curadoria de filmes</a>
+          </div>
+        </div>
+
+        <div class="term" aria-label="Exemplo de código em C">
+          <div class="tbar">
+            <i style="background:#ef4444"></i>
+            <i style="background:var(--amber)"></i>
+            <i style="background:var(--green)"></i>
+            <span>cinema/catalogo_filmes.c</span>
+          </div>
+<pre><span class="k">#include</span> <span class="n">&lt;stdio.h&gt;</span>
+
+<span class="c">// Um filme do catálogo</span>
+<span class="k">typedef struct</span> {
+  <span class="t">char</span> titulo[<span class="n">40</span>];
+  <span class="t">int</span> ano;
+  <span class="t">float</span> nota;
+} <span class="t">Filme</span>;
+
+<span class="t">int</span> <span class="k">main</span>(<span class="t">void</span>) {
+  <span class="t">Filme</span> lista[<span class="n">3</span>] = {
+    {<span class="n">"Blade Runner 2049"</span>, <span class="n">2017</span>, <span class="n">9.0</span>},
+    {<span class="n">"2001: Uma Odisseia"</span>, <span class="n">1968</span>, <span class="n">9.5</span>},
+    {<span class="n">"Oppenheimer"</span>, <span class="n">2023</span>, <span class="n">8.8</span>}
+  };
+  <span class="t">float</span> soma = <span class="n">0</span>;
+
+  <span class="k">for</span> (<span class="t">int</span> i = <span class="n">0</span>; i &lt; <span class="n">3</span>; i++) {
+    <span class="k">printf</span>(<span class="n">"%s (%d) - nota %.1f\n"</span>, lista[i].titulo, lista[i].ano, lista[i].nota);
+    soma += lista[i].nota;
+  }
+
+  <span class="k">printf</span>(<span class="n">"Media: %.1f\n"</span>, soma / <span class="n">3</span>);
+  <span class="k">return</span> <span class="n">0</span>;
+}</pre>
+        </div>
+      </section>
+
+      <!-- Seção de códigos em C -->
+      <section id="codigos">
+        <div class="sec-h">
+          <div>
+            <small>// exercícios</small>
+            <h2>Meus códigos em C</h2>
+          </div>
+          <a class="link" href="https://github.com/Arthurz987" target="_blank" rel="noopener">
+            Acessar repositório completo →
+          </a>
+        </div>
+
+        <div class="progs" id="progs"></div>
+      </section>
+
+      <!-- Seção de cinema -->
+      <section id="cinema">
+        <div class="sec-h">
+          <div>
+            <small>// estética cinematográfica</small>
+            <h2>Cinema &amp; filosofia</h2>
+          </div>
+        </div>
+
+        <blockquote class="cq">
+          “O cinema é a máquina que esculpe o tempo; o código em C é a ferramenta que esculpe a máquina.”
+        </blockquote>
+
+        <div class="chips" id="chips" role="tablist" aria-label="Filmes favoritos"></div>
+
+        <div class="film">
+          <div class="quote" aria-live="polite">
+            <small id="fm"></small>
+            <h3 id="ft"></h3>
+            <p id="fs"></p>
+          </div>
+
+          <div class="still" id="fstill">
+            <img class="film-image is-active" src="" alt="" hidden>
+            <span class="rec"><b>●</b> REC</span>
+            <div class="soon"><small>Imagem em breve</small></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de contato -->
+      <section id="contato">
+        <div class="contact">
+          <div>
+            <span class="chip amber">● Disponível para estágios</span>
+            <h2>Vamos conversar sobre sistemas de baixo nível ou debater um roteiro?</h2>
+            <p>
+              Aberto a oportunidades de estágio em tecnologia, projetos acadêmicos e conversas sobre cinema.
+            </p>
+          </div>
+
+          <div class="cl">
+            <a href="mailto:arthurpereira47al@gmail.com">
+              <span class="ico" style="background:rgba(245,158,11,.15);color:var(--amber)">@</span>
+              <span>
+                <b>Iniciar diálogo</b>
+                <small>arthurpereira47al@gmail.com</small>
+              </span>
+              <em>›</em>
+            </a>
+
+            <a href="https://github.com/Arthurz987" target="_blank" rel="noopener">
+              <span class="ico" style="background:rgba(56,189,248,.15);color:var(--cyan)">&gt;_</span>
+              <span>
+                <b>Inspecionar projetos</b>
+                <small>github.com/Arthurz987</small>
+              </span>
+              <em>›</em>
+            </a>
+
+            <a href="https://www.linkedin.com/in/arthur-pereira-5b5a1b433/" target="_blank" rel="noopener">
+              <span class="ico" style="background:rgba(16,185,129,.15);color:var(--green)">in</span>
+              <span>
+                <b>Conectar no LinkedIn</b>
+                <small>linkedin.com/in/arthur-pereira</small>
+              </span>
+              <em>›</em>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="wrap">
+      <div>Arthur Pereira · Sistemas de Informação · UDF</div>
+      <div class="soc">
+        <a href="https://github.com/Arthurz987" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/arthur-pereira-5b5a1b433/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:arthurpereira47al@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Navegação inferior (mobile) -->
+  <nav class="bottom" aria-label="Navegação móvel">
+    <a href="#inicio" class="on"><b>▣</b>Início</a>
+    <a href="#codigos"><b>&lt;&gt;</b>Códigos C</a>
+    <a href="#cinema"><b>▤</b>Cinema</a>
+    <a href="#contato"><b>@</b>Contato</a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -91,7 +91,7 @@
       titulo: 'Parasita',
       ano: 2019,
       diretor: 'Bong Joon-ho',
-      imagem: 'img/parasita.webp',
+      imagem: 'img/paras1ta.jpg',
       sinopse: 'A família Kim, pobre e desempregada, entra aos poucos na vida da rica família Park usando identidades falsas. O plano começa a sair do controle.'
     },
     {
